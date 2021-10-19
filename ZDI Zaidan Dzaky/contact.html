@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zaidan Dzaky Ibrahim" />
+    <meta name="keywords" content="HTML, CSS, ZDI Website, contact " />
+    <meta name="description" content="Contact ZDI" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="stylecontact.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Image/ZDI.png" />
+    <script src="script.js" defer></script>
+    <title>Contact</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        scroll-behavior: smooth;
+      }
+      .wrapper {
+        width: 1100px;
+        margin: auto;
+        position: relative;
+      }
+      .logo a {
+        font-size: 50px;
+        font-weight: 800;
+        float: left;
+        font-family: courier;
+        color: blue;
+      }
+      .menu {
+        float: right;
+      }
+      nav {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        line-height: 80px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        background: white;
+        z-index: 1;
+        border-bottom: 1px solid blue;
+        transition: 0.25s;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      nav ul li {
+        float: left;
+      }
+      nav ul li a {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Open Sans", sans-serif;
+        transition: 0.25s;
+      }
+      .tombol-menu {
+        position: absolute;
+        top: 1.7rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+      }
+
+      .tombol-menu .garis {
+        height: 3px;
+        background-color: #3f72af;
+      }
+      @media screen and (max-width: 991.98px) {
+        .logo a {
+          display: inline;
+        }
+        .tombol-menu {
+          display: flex;
+        }
+        nav .menu {
+          display: none;
+        }
+        nav .menu.active {
+          display: flex;
+        }
+        nav ul li {
+          width: 100%;
+          border-bottom: 1px solid #333333;
+        }
+        .wrapper {
+          width: 90%;
+        }
+        .logo a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        nav .menu {
+          width: 100%;
+          margin: 0;
+        }
+        nav .menu ul {
+          text-align: center;
+          margin: auto;
+          line-height: 60px;
+        }
+        nav .menu ul li {
+          display: inline-block;
+          float: none;
+        }
+        body::-webkit-scrollbar {
+          display: none;
+        }
+        .darkmode nav ul li {
+          border-bottom: 1px solid #569df5;
+        }
+      }
+      .darkmode {
+        background-color: black;
+        color: white;
+      }
+      .icon {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 80px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        text-decoration: none;
+      }
+      .darkmode .contact-section {
+        background-color: black;
+      }
+      .darkmode nav {
+        background-color: black !important;
+      }
+      .darkmode ul li a {
+        color: white;
+      }
+      .darkmode .contact-form-text {
+        background-color: #44453e;
+        color: #fff;
+      }
+      .darkmode .contact-section p {
+        color: #fff !important;
+      }
+      .darkmode .border {
+        background: #44453e;
+      }
+      .darkmode .contact-form-text:focus {
+        box-shadow: 0 0 10px 4px #ddf719;
+      }
+      .darkmode .fa {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="index.html">ZDI</a></div>
+        <a href="##" class="tombol-menu">
+          <span class="garis"></span>
+          <span class="garis"></span>
+          <span class="garis"></span>
+        </a>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="projects.html" title="Projects">Projects</a></li>
+            <li><a href="contact.html" title="Contact me">Contact</a></li>
+            <li><a href="about.html" title="About ">About</a></li>
+            <li><span class="icon" onclick="setDarkMode()" id="darkBtn">Dark 🌙</span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="contact-section">
+      <h1 style="margin-bottom: 20px">Contact Me</h1>
+      <p style="text-align: center; color: #2c3ddb">
+        Jika kalian ada masukkan atau memiliki pertanyaan silahkan kontak kami Dengan Form<br />
+        atau kontak saya melalui Sosial Media.,
+        <p style="text-align: center;color: #2c3ddb;font-size: 15px;"><i>(* = Required)</i></p>
+      </p>
+      <div class="border"></div>
+      <form class="contact-form" method="POST"  data-netlify="true">
+        <input type="text" class="contact-form-text" placeholder="Name*" required minlength="1" maxlength="25" name="name"/>
+        <input type="email" class="contact-form-text" placeholder="email*" required minlength="1" maxlength="75" name="email"/>
+        <input type="tel" class="contact-form-text" placeholder="phone" maxlength="25" pattern="[0-9]{3,25}" title="Number Only" name="tel"/>
+        <textarea class="contact-form-text" placeholder="Message*" required minlength="1" maxlength="500" name="message"></textarea>
+        <div data-netlify-recaptcha="true"></div>
+        <input type="submit" class="contact-form-btn" value="Send" />
+      </form>
+      <h2>Social Media</h2>
+      <div class="sosmed">
+        <p>
+          <a href="mailto:zaidan.dzaky.i@gmail.com" class="fa fa-envelope" style="font-size: 30px" title="gmail"></a>
+          <a href="https://www.instagram.com/zaidan.account/" class="fa fa-instagram" target="_blank" style="font-size: 30px" title="Instagram"></a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

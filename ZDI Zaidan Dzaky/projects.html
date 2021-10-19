@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZDI Projects" />
+    <meta name="author" content="Zaidan Dzaky Ibrahim" />
+    <meta name="keywords" content="HTML, CSS, ZDI Website, projects " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Image/ZDI.png" />
+    <script src="script.js" defer></script>
+    <script src="https://use.fontawesome.com/6cd66b285b.js"></script>
+    <title>Projects</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1d76db;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00336e;
+      }
+      .wrapper {
+        width: 1100px;
+        margin: auto;
+        position: relative;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Open Sans", sans-serif;
+        overflow-x: hidden;
+        height: 1000px;
+        transition: 0.25s;
+      }
+      .logo a {
+        font-size: 50px;
+        font-weight: 800;
+        float: left;
+        font-family: courier;
+        color: blue;
+      }
+      .menu {
+        float: right;
+      }
+      nav {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        line-height: 80px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        background: white;
+        z-index: 1;
+        border-bottom: 1px solid blue;
+        transition: 0.25s;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      nav ul li {
+        float: left;
+      }
+      nav ul li a {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+      .tombol-menu {
+        position: absolute;
+        top: 1.7rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+      }
+
+      .tombol-menu .garis {
+        height: 3px;
+        background-color: #3f72af;
+      }
+      @media screen and (max-width: 991.98px) {
+        .logo a {
+          display: inline;
+        }
+        .tombol-menu {
+          display: flex;
+        }
+        nav .menu {
+          display: none;
+        }
+        nav .menu.active {
+          display: flex;
+        }
+        nav ul li {
+          width: 100%;
+          border-bottom: 1px solid #333333;
+        }
+        .darkmode nav ul li {
+          border-bottom: 1px solid #569df5;
+        }
+      }
+      @media screen and (max-width: 1018px) {
+        .footer-section {
+          display: block;
+          width: 50%;
+          height: auto;
+        }
+      }
+      @media screen and (max-width: 991.81px) {
+        .wrapper {
+          width: 90%;
+        }
+        .logo a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        nav .menu {
+          width: 100%;
+          margin: 0;
+        }
+        nav .menu ul {
+          text-align: center;
+          margin: auto;
+          line-height: 60px;
+        }
+        nav .menu ul li {
+          display: inline-block;
+          float: none;
+        }
+        .footer-section {
+          width: 50% !important;
+          display: block !important;
+          height: auto !important;
+        }
+        body::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .icon {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 80px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        text-decoration: none;
+      }
+      .icon:hover {
+        color: #1d76db;
+      }
+      .darkmode {
+        background-color: black;
+        color: white;
+      }
+      .darkmode nav {
+        background-color: black !important;
+      }
+      .darkmode ul li a {
+        color: white;
+      }
+      .darkmode .card{
+        box-shadow: 0px 4px 8px 0px #e8e225;
+      }
+      .darkmode p{
+        color: #fff !important;
+      }
+      .darkmode h2{
+        color: #f59a1b !important;
+      }
+      .darkmode button{
+        background-color: #e89e35 !important;
+      }
+      .darkmode button:hover{
+        background-color: #b36c09 !important;
+      }
+      header {
+        height: 100px;
+        font-family: "sans-serif";
+        text-align: center;
+        padding-top: 30px;
+        color: #fff;
+        background-color: #050047;
+        font-size: 30px;
+        letter-spacing: 0px;
+      }
+      h1 span:nth-child(1){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+      }
+      h1 span:nth-child(2){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 0.3s;
+      }
+      h1 span:nth-child(3){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 0.6s;
+      }
+      h1 span:nth-child(4){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 0.9s;
+      }
+      h1 span:nth-child(5){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 1.2s;
+      }
+      h1 span:nth-child(6){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 1.5s;
+      }
+      h1 span:nth-child(7){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 1.8s;
+      }
+      h1 span:nth-child(8){
+        color: #00336e;
+        animation: alphabet 2.5s  infinite ;
+        animation-delay: 2.1s;
+      }
+      @keyframes alphabet{
+        0% {color: #00336e;}
+        50% {color: #fff;
+        text-shadow:0 0 20px #fff;}
+        100% {color: #00336e;}
+      }
+      .project-text{
+          text-align: center;
+          margin-top: 25px;
+      }
+      .project-text h2{
+          font-family: 'comic sans ms';
+          margin-bottom: 10px;
+          font-size: 40px;
+          color: #0e54c4;
+      }
+      .project-text p{
+          color: #00336e;
+      }
+      .project-lists{
+          display: flex ;
+          flex-wrap: wrap;
+          position: relative;
+      }
+      .card{
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          text-align: center;
+          font-family: 'arial';
+          margin: 0 auto ;
+          max-width: 500px;
+          margin-top: 50px;
+          border-radius: 10px;
+      }
+      .card img{
+          width: 500px;
+          height: 300px;
+          border-radius: 10px 10px 0 0;
+      }
+      .container{
+        height: 120px !important;
+      }
+      button{
+          width: 50%;
+          outline: none;
+          color: #fff;
+          cursor: pointer;
+          border: none;
+          font-size: 15px;
+          background-color: #0e54c4;
+          height: 50px;
+          border-radius: 50px;
+          font-family:Arial;
+          transition: 0.5s;
+          margin-bottom: 10px;
+          transition: all 0.5s;
+      }    
+      button:hover{
+        background-color: #091a87;
+        padding-right: 20px;
+      }
+      button span{
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span::after{
+        content: '\00bb' ;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+
+      }
+      button:hover span{
+        padding-right: 30px;
+      }
+      button:hover span::after{
+        opacity: 1;
+        right: 0;
+      }
+      .container{
+          height: 90px;
+      }
+      .container h3{
+          font-family: cursive;
+          font-size: 27px;
+          color: #122dde;
+      }
+      .container p{
+          font-size: 15px;
+          margin-top: 10px;
+      }
+      h4{
+        text-align: center;
+        font-size: 15px;
+        color: black;
+      }
+      .darkmode h4{
+        color: #fff;
+      }
+      #contact-footer {
+      background-color: rgb(104, 11, 158);
+      padding: 50px 0px 50px 0px;
+      margin-top: 100px;
+      }
+      .footer {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+      }
+      .footer-section {
+        width: 20%;
+        margin: 0 auto;
+        color: white;
+      }
+      .footer-section h3 , .footer-section h3 a{
+        color: white;
+      }
+      .footer-section p a {
+        color: white;
+      }
+      .footer-section p a:hover {
+        text-decoration: underline;
+      }
+      h3 {
+        font-family: "comic sans ms";
+        font-weight: 800;
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: blue;
+        width: 100%;
+        line-height: 50px;
+      }
+      .footer-section a:hover{
+        color: #569df5;
+      }
+      #copyright {
+        text-align: center;
+        width: 100%;
+        padding: 50px 0px 50px 0px;
+        margin-top: 0px;
+        background-color: rgb(104, 11, 158);
+        color: white;
+        border-top: 1px solid white;
+      }
+      .fa {
+        margin: 5px 10px;
+        color: #fff;
+      }
+      .fa:hover {
+        opacity: 0.7;
+      }
+      @media screen and (max-width:532px) {
+          header{
+              font-size: 20px ;
+          }
+      }
+      @media screen and (max-width:600px){
+          .card{
+              width: 80%;
+          }
+          .card img{
+              width:100%;
+              height: 300px;
+          }
+          .container h4 i{
+            font-size: 80%;
+          }
+          button{
+            margin-top: 10px;
+          }
+          .container p{
+            margin-top: 10px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="index.html">ZDI</a></div>
+        <a href="#" class="tombol-menu">
+          <span class="garis"></span>
+          <span class="garis"></span>
+          <span class="garis"></span>
+        </a>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="projects.html" title="Projects">Projects</a></li>
+            <li><a href="contact.html" title="Contact me">Contact</a></li>
+            <li><a href="about.html" title="About ">About</a></li>
+            <li><span class="icon" onclick="setDarkMode()" id="darkBtn" title="Change Theme">Dark 🌙</span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <h1>
+        <span>P</span>
+        <span>R</span>
+        <span>O</span>
+        <span>J</span>
+        <span>E</span>
+        <span>C</span>
+        <span>T</span>
+        <span>S</span>
+      </h1>
+    </header>
+    <section>
+      <div class="project-text">
+        <h2>School And Programming</h2>
+        <p>Disini Saya Akan menjelaskan Tentang tugas sekolah Maupun project saya Dalam pemrogramman.<br>
+            saya juga akan mengshare beberapa program Programming dan Tutorial yang dilakukan saat sekolah<br>
+            sekian semoga ilmu yang saya berikan bermanfaat🙂.
+        </p>
+      </div>
+      <div class="project-lists">
+          <div class="card">
+              <img src="https://image.freepik.com/free-vector/school-building-educational-institution-college_107791-1051.jpg">
+              <div class="container">
+                <h3>School 📚</h3>
+                <p>Tugas sekolah, Prakarya Sekolah, Praktek, tutorial</p>
+                <h4><i>(Coming Soon)</i></h4>
+              </div>
+              <p><a href=""><button><span><b>View More </b></span></button></a></p>
+          </div>
+          <div class="card" >
+            <img src="Image/Programming.jpg" >
+            <div class="container">
+                <h3>Programming 💻</h3>
+                <p>Coding, front end developer, Back end, programming </p>
+                <h4><i>(Coming Soon)</i></h4>
+            </div>
+            <p><a href=""><button><span><b>View More </b></span></button></a></p>
+        </div>
+      </div>
+      <div id="contact-footer">
+        <div class="wrapper">
+          <div class="footer">
+            <div class="footer-section">
+              <h3 style="font-family: courier; font-size: 40px">ZDI</h3>
+              <p>Zaidan Dzaky Ibrahim <br />Personal Website</p>
+            </div>
+            <div class="footer-section">
+              <h3><a href="about.html" title="About">About</a></h3>
+              <p>Seputar Programming Dan Project/Tugas sekolah</p>
+            </div>
+            <div class="footer-section">
+              <h3><a href="credit.html" title="Credit">Credit</a></h3>
+              <p><a href="credit.html" title="Author Web">Zaidan Dzaky Ibrahim</a></p>
+              <p><a href="credit.html" title="Credit image & picture">Image and Picture</a></p>
+            </div>
+            <div class="footer-section">
+              <h3>Social</h3>
+              <a href="https://www.instagram.com/zaidan.account/" class="fa fa-instagram" target="_blank" style="font-size: 30px" title="Instagram"></a>
+              <a href="https://www.youtube.com/channel/UCT_r7D-qu7Xbh_d3uHhX-8w" class="fa fa-youtube-play" target="_blank" style="font-size: 30px" title="Youtube"></a>
+              <a href="https://github.com/zaidandzakyi" class="fa fa-github" style="font-size: 30px" target="_blank" title="Github"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div id="copyright">
+        <div class="wrapper">&copy; 2021. <b>Zaidan Dzaky</b> All Rights Reserved.</div>
+      </div>
+  </body>
+</html>

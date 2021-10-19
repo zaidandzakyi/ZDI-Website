@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZDI About" />
+    <meta name="author" content="Zaidan Dzaky Ibrahim" />
+    <meta name="keywords" content="HTML, CSS, ZDI Website ,zaidan dzaky i" />
+    <link rel="stylesheet" href="style-about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Image/ZDI.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <title>About</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1d76db;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00336e;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Open Sans", sans-serif;
+        overflow-x: hidden;
+        transition: 0.25s;
+      }
+      .wrapper {
+        width: 1100px;
+        margin: auto;
+        position: relative;
+      }
+      .logo a {
+        font-size: 50px;
+        font-weight: 800;
+        float: left;
+        font-family: courier;
+        color: blue;
+      }
+      .menu {
+        float: right;
+      }
+      nav {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        line-height: 80px;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+        background: white;
+        z-index: 1;
+        border-bottom: 1px solid blue;
+        transition: 0.25s;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      nav ul li {
+        float: left;
+      }
+      nav ul li a {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+      .tombol-menu {
+        position: absolute;
+        top: 1.7rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+      }
+
+      .tombol-menu .garis {
+        height: 3px;
+        background-color: #3f72af;
+      }
+
+      @media screen and (max-width: 991.98px) {
+        .logo a {
+          display: inline;
+        }
+        .tombol-menu {
+          display: flex;
+        }
+        nav .menu {
+          display: none;
+        }
+        nav .menu.active {
+          display: flex;
+        }
+        nav ul li {
+          width: 100%;
+          border-bottom: 1px solid #333333;
+        }
+        .darkmode nav ul li {
+          border-bottom: 1px solid #569df5;
+        }
+      }
+      @media screen and (max-width: 991.81px) {
+        .wrapper {
+          width: 90%;
+        }
+        .logo a {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+        nav .menu {
+          width: 100%;
+          margin: 0;
+        }
+        nav .menu ul {
+          text-align: center;
+          margin: auto;
+          line-height: 60px;
+        }
+        nav .menu ul li {
+          display: inline-block;
+          float: none;
+        }
+        .footer-section {
+          width: 50% !important;
+          display: block !important;
+          height: auto !important;
+        }
+      }
+      .about {
+        display: flex;
+        margin: auto;
+        position: relative;
+        margin-bottom: 50px;
+      }
+      .about img {
+        width: 30%;
+        height: 100%;
+        margin-left: 100px;
+        margin-top: 50px;
+      }
+      .description {
+        font-family: sans-serif;
+        margin-top: 20px;
+        padding: 20px 50px 50px 50px;
+      }
+      .description h1 {
+        text-align: center;
+        font-family: "comic sans ms";
+        color: blue;
+        font-size: 40px;
+        margin-bottom: 30px;
+        animation-name: first;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes first {
+        0% {
+          color: blue;
+        }
+        25% {
+          color: rgb(172, 62, 11);
+        }
+        50% {
+          color: orange;
+        }
+        75% {
+          color: green;
+        }
+        100% {
+          color: blue;
+        }
+      }
+      .description p {
+        padding-left: 10px;
+        font-family: "sans-serif";
+        color: #3f72af;
+        font-size: 20px;
+      }
+      @media screen and (max-width: 991.81px) {
+        .about {
+          display: block;
+        }
+        .about img {
+          width: 60% !important;
+          margin-left: 100px;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          margin-top: 10px;
+        }
+        .description {
+          margin-top: 10px;
+        }
+        body::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .container {
+        background-color: aqua;
+        padding: 10px;
+        margin-top: 90px;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.5s;
+      }
+      .container h2 {
+        color: rgb(68, 17, 17);
+        font-family: "comic sans ms";
+        text-align: center;
+      }
+      .fa {
+        margin: 5px 10px;
+      }
+      .fa:hover {
+        opacity: 0.7;
+      }
+      .fa-youtube-play {
+        color: rgb(167, 20, 20);
+      }
+      .fa-instagram {
+        color: purple;
+      }
+      #copyright {
+        text-align: center;
+        width: 100%;
+        padding: 50px 0px 50px 0px;
+        margin-top: 0px;
+        background-color: rgb(104, 11, 158);
+        color: white;
+        border-top: 1px solid white;
+      }
+      #contact-footer {
+        background-color: rgb(104, 11, 158);
+        padding: 50px 0px 50px 0px;
+      }
+      .footer {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+      }
+      .footer-section {
+        width: 20%;
+        margin: 0 auto;
+        color: white;
+      }
+      .footer-section h3 {
+        color: white;
+      }
+      .footer-section p a {
+        color: white;
+      }
+      .footer-section p a:hover {
+        text-decoration: underline;
+      }
+      h3 {
+        font-family: "comic sans ms";
+        font-weight: 800;
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: blue;
+        width: 100%;
+        line-height: 50px;
+      }
+      .footer-section .fa {
+        margin: 5px 10px;
+        color: #fff !important;
+      }
+      .fa:hover {
+        opacity: 0.7;
+      }
+      .icon {
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 80px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        text-decoration: none;
+      }
+      .icon:hover {
+        color: #1d76db;
+      }
+      .darkmode {
+        background-color: black;
+        color: white;
+      }
+      .darkmode nav {
+        background-color: black !important;
+      }
+      .darkmode ul li a {
+        color: white;
+      }
+      .darkmode .description p {
+        color: #fff;
+      }
+      .darkmode .container {
+        background-color: #0f3375;
+      }
+      .darkmode .container h2 {
+        color: #81acfc;
+      }
+      .darkmode .fa {
+        color: #fff;
+      }
+      .footer-section a:hover {
+        color: #569df5;
+      }
+      @media screen and (max-width: 1018px) {
+        .footer-section {
+          display: block;
+          width: 50%;
+          height: auto;
+        }
+      }
+      .footer-section a:hover {
+        color: #569df5;
+      }
+      .footer-section h3 a {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="index.html">ZDI</a></div>
+        <a href="#" class="tombol-menu">
+          <span class="garis"></span>
+          <span class="garis"></span>
+          <span class="garis"></span>
+        </a>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="projects.html" title="Projects">Projects</a></li>
+            <li><a href="contact.html" title="Contact me">Contact</a></li>
+            <li><a href="about.html" title="About ">About</a></li>
+            <li><span class="icon" onclick="setDarkMode()" id="darkBtn">Dark 🌙</span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="about">
+        <img src="Image/Laptop-About.png" alt="About" />
+        <div class="description">
+          <h1>About</h1>
+          <p>ZDI Adalah Website Yang Dibuat Untuk Menyebarkan Ilmu Tentang Pemrogramman dan juga ZDI akan memberikan pengetahuan lain yang menyangkut pembelajaran sekolah sehingga kita bisa sama-sama belajar.</p>
+          <br />
+          <p>Website ZDI Dibuat Saya Zaidan Dzaky Ibrahim pada tahun 2021, saya berharap ZDI dapat Menginspirasi orang sehingga lebih termotivasi untuk Belajar Programming walaupun tetap sekolah</p>
+          <div class="container">
+            <h2>Follow My Social Media For More Information</h2>
+            <div class="Social">
+              <a href="https://www.instagram.com/zaidan.account/" class="fa fa-instagram" target="_blank" style="font-size: 30px" title="Instagram"></a>
+              <a href="https://www.youtube.com/channel/UCT_r7D-qu7Xbh_d3uHhX-8w" class="fa fa-youtube-play" target="_blank" style="font-size: 30px" title="Youtube"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="contact-footer">
+      <div class="wrapper">
+        <div class="footer">
+          <div class="footer-section">
+            <h3 style="font-family: courier; font-size: 40px">ZDI</h3>
+            <p>Zaidan Dzaky Ibrahim <br />Personal Website</p>
+          </div>
+          <div class="footer-section">
+            <h3><a href="about.html" title="About">About</a></h3>
+            <p>Seputar Programming Dan Project/Tugas sekolah</p>
+          </div>
+          <div class="footer-section">
+            <h3><a href="credit.html" title="Credit">Credit</a></h3>
+            <p><a href="credit.html" title="Author web">Zaidan Dzaky Ibrahim</a></p>
+            <p><a href="credit.html" title="Credit image & picture">Image and Picture</a></p>
+          </div>
+          <div class="footer-section s-icon">
+            <h3>Social</h3>
+            <a href="https://www.instagram.com/zaidan.account/" class="fa fa-instagram" target="_blank" style="font-size: 30px" title="Instagram"></a>
+            <a href="https://www.youtube.com/channel/UCT_r7D-qu7Xbh_d3uHhX-8w" class="fa fa-youtube-play" target="_blank" style="font-size: 30px" title="Youtube"></a>
+            <a href="https://github.com/zaidandzakyi" class="fa fa-github" style="font-size: 30px" target="_blank" title="Github"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="copyright">
+      <div class="wrapper">&copy; 2021. <b>Zaidan Dzaky</b> All Rights Reserved.</div>
+    </div>
+  </body>
+</html>

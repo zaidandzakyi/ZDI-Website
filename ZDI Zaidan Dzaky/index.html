@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ZDI Home" />
+    <meta name="author" content="Zaidan Dzaky Ibrahim" />
+    <meta name="keywords" content="HTML, CSS, ZDI Website " />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Image/ZDI.png" />
+    <script src="script.js" defer></script>
+    <title>ZDI Zaidan</title>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="index.html">ZDI</a></div>
+        <a href="#" class="tombol-menu">
+          <span class="garis"></span>
+          <span class="garis"></span>
+          <span class="garis"></span>
+        </a>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="projects.html" title="Projects">Projects</a></li>
+            <li><a href="contact.html" title="Contact me">Contact</a></li>
+            <li><a href="about.html" title="About ">About</a></li>
+            <li><span class="icon" onclick="setDarkMode()" id="darkBtn" title="Change Theme">Dark 🌙</span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <!--section satu-->
+      <section>
+        <img src="Image/Learn.png" style="width: 80%" />
+        <div class="kolom">
+          <p class="deskripsi">Programming dan Sekolah</p>
+          <h2>Belajar Untuk Masa Depan</h2>
+          <p>Selain Sekolah kita juga bisa belajar programming karena programming bermanfaat untuk banyak hal.</p>
+        </div>
+      </section>
+      <!--section motivasi dua-->
+      <section>
+        <div class="kolom">
+          <p class="deskripsi">Programmer</p>
+          <h2>Web, Game,Dan lain-lain</h2>
+          <p>
+            Dengan programming kita bisa membuat bermacam macam program.ada yang belajar programming untuk menjadi web developer,membuat aplikasi & game,(Java,C#,C++,dll)membuat sistem operasi, machine learning,fintech dan masih banyak
+            lagi.
+          </p>
+        </div>
+        <img src="Image/Web.png" style="width: 60%" />
+      </section>
+    </div>
+    <!--Section Projects-->
+    <section>
+      <div class="tengah">
+        <div class="kolom">
+          <p class="deskripsi">Project-Project Saya</p>
+          <h2>Projects</h2>
+          <p>
+            Berikut Adalah beberapa program dan project yang saya kerjakan saat ini,beberapa memang <br />
+            merupakan tugas sekolah dan juga saya masih pemula dalam pemrogramman ,<br />
+            Semua project dibawah Ini Masih dalam Proses .
+          </p>
+        </div>
+        <div class="project-list">
+          <div class="card" id="mycard">
+            <a href="#">
+              <img src="https://image.freepik.com/free-vector/calculator_1284-3534.jpg" />
+              <div class="container">
+                <h4>Python kalkulator</h4>
+                <p>Cara membuat kalkulator di python</p>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img src="https://image.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg" />
+              <div class="container">
+                <h4>Python : Tipe Data</h4>
+                <p>Tipe Data pada Bahasa pemrogramman Python</p>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="#">
+              <img src="https://image.freepik.com/free-photo/shallow-focus-shot-insects-trapped-spider-web_181624-34294.jpg" />
+              <div class="container">
+                <h4>perangkap lalat Buah</h4>
+                <p>Cara membuat Perangkap lalat Buah</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <div id="contact-footer">
+      <div class="wrapper">
+        <div class="footer">
+          <div class="footer-section">
+            <h3 style="font-family: courier; font-size: 40px">ZDI</h3>
+            <p>Zaidan Dzaky Ibrahim <br />Personal Website</p>
+          </div>
+          <div class="footer-section">
+            <h3><a href="about.html" title="About">About</a></h3>
+            <p>Seputar Programming Dan Project/Tugas sekolah</p>
+          </div>
+          <div class="footer-section">
+            <h3><a href="credit.html" title="Credit">Credit</a></h3>
+            <p>
+              <a href="credit.html" title="author Web">Zaidan Dzaky Ibrahim</a><br />
+              <a href="credit.html" title="Credit image & picture">Image and Picture</a>
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Social</h3>
+            <a href="https://www.instagram.com/zaidan.account/" class="fa fa-instagram" target="_blank" style="font-size: 30px" title="Instagram"></a>
+            <a href="https://www.youtube.com/channel/UCT_r7D-qu7Xbh_d3uHhX-8w" class="fa fa-youtube-play" target="_blank" style="font-size: 30px" title="Youtube"></a>
+            <a href="https://github.com/zaidandzakyi" class="fa fa-github" style="font-size: 30px" target="_blank" title="Github"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="copyright">
+      <div class="wrapper">&copy; 2021. <b>Zaidan Dzaky</b> All Rights Reserved.</div>
+    </div>
+  </body>
+</html>
