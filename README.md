@@ -1,6 +1,6 @@
 # ZDI-Website
 Repository website ZDI
-
+https://zdi-zaidandz.netlify.app/
 terdiri dari 5 halaman,
 dibuat dengan :
 
